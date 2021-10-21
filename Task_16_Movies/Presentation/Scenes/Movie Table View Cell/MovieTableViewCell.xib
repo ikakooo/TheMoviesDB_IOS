@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="464" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="Task_16_Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="494" height="464"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="494" height="464"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TSM-OM-oL5">
+                        <rect key="frame" x="0.0" y="0.0" width="494" height="464"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_kotlin" translatesAutoresizingMaskIntoConstraints="NO" id="TKA-TZ-z5A">
+                                <rect key="frame" x="24" y="10" width="446" height="444"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n8-o3-CeS">
+                                <rect key="frame" x="24" y="414" width="446" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXT-vP-W7L">
+                                        <rect key="frame" x="10" y="0.0" width="436" height="40"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.055466510355472565" green="0.034077271819114685" blue="0.016969142481684685" alpha="0.50713616175367338" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="zXT-vP-W7L" firstAttribute="leading" secondItem="0n8-o3-CeS" secondAttribute="leading" constant="10" id="286-Nf-cdQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="zXT-vP-W7L" secondAttribute="bottom" id="BsX-eg-P9I"/>
+                                    <constraint firstItem="zXT-vP-W7L" firstAttribute="top" secondItem="0n8-o3-CeS" secondAttribute="top" id="b3n-V5-Sub"/>
+                                    <constraint firstAttribute="trailing" secondItem="zXT-vP-W7L" secondAttribute="trailing" id="gii-4s-mZJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TKA-TZ-z5A" secondAttribute="trailing" constant="24" id="6xo-rK-yh2"/>
+                            <constraint firstAttribute="bottom" secondItem="0n8-o3-CeS" secondAttribute="bottom" constant="10" id="BPQ-lg-4jd"/>
+                            <constraint firstItem="0n8-o3-CeS" firstAttribute="leading" secondItem="TSM-OM-oL5" secondAttribute="leading" constant="24" id="L6X-Ij-beR"/>
+                            <constraint firstItem="TKA-TZ-z5A" firstAttribute="top" secondItem="TSM-OM-oL5" secondAttribute="top" constant="10" id="Mgz-PI-ENI"/>
+                            <constraint firstAttribute="bottom" secondItem="TKA-TZ-z5A" secondAttribute="bottom" constant="10" id="R7M-kP-OeN"/>
+                            <constraint firstAttribute="trailing" secondItem="0n8-o3-CeS" secondAttribute="trailing" constant="24" id="U4f-hG-CdW"/>
+                            <constraint firstItem="TKA-TZ-z5A" firstAttribute="leading" secondItem="TSM-OM-oL5" secondAttribute="leading" constant="24" id="xkn-hO-Ai7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="TSM-OM-oL5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZSC-2F-VOK"/>
+                    <constraint firstAttribute="bottom" secondItem="TSM-OM-oL5" secondAttribute="bottom" id="bPs-eB-mdE"/>
+                    <constraint firstAttribute="trailing" secondItem="TSM-OM-oL5" secondAttribute="trailing" id="gAV-4z-sYo"/>
+                    <constraint firstItem="TSM-OM-oL5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="i6z-Ng-YLy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="movieIMG" destination="TKA-TZ-z5A" id="oR0-P4-zYV"/>
+                <outlet property="movieName" destination="zXT-vP-W7L" id="ZAg-jr-HiP"/>
+            </connections>
+            <point key="canvasLocation" x="72.463768115942031" y="96.428571428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="logo_kotlin" width="225" height="225"/>
+    </resources>
+</document>
