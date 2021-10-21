@@ -32,11 +32,22 @@
                     </view>
                     <connections>
                         <outlet property="movieTableView" destination="33l-3l-v8s" id="wjg-t4-0zA"/>
+                        <segue destination="ayi-Zi-9CI" kind="show" identifier="MovieFullScreenViewController" id="1XU-Fl-7S9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
+        </scene>
+        <!--MovieFullScreenViewController-->
+        <scene sceneID="WaH-2W-XJI">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MovieFullScreenViewController" storyboardName="MovieFullScreenViewController" referencedIdentifier="MovieFullScreenViewController" id="ayi-Zi-9CI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iM6-7h-5v3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6o-z1-3PA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="87"/>
         </scene>
     </scenes>
     <resources>

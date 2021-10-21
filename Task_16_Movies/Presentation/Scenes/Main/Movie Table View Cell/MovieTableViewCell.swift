@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 class MovieTableViewCell: UITableViewCell {
+    @IBOutlet weak var reitingStars: UIButton!
     @IBOutlet weak var movieName: UILabel!
     @IBOutlet weak var movieIMG: UIImageView!
     
@@ -29,6 +30,7 @@ class MovieTableViewCell: UITableViewCell {
         print("iakaooooo")
         print(with)
         movieName.text = with.title
+        reitingStars.setAllStatesTitle("\(String(describing: with.voteAverage ?? 0))")
         loadIMGFromInternet(ImgURL: MovieConstants.BASE_IMG_URL + (with.posterPath ?? ""))
     }
     

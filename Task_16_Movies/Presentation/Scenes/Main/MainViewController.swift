@@ -15,12 +15,14 @@ class MainViewController: UIViewController {
     
     private var movies:[Movie] = []
     private var page = 1
-
+    fileprivate var cellIndexPathRow = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         movieTableView.dataSource = self
+        movieTableView.delegate = self
         movieTableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieTableViewCell")
         
         print("ikakooo")
@@ -30,18 +32,18 @@ class MainViewController: UIViewController {
         
         movieManager.getMovies(page: 1 ) { movies in
             self.movies = movies.results ?? []
-          // print(movies)
+            // print(movies)
             
             DispatchQueue.main.async {
                 self.movieTableView.reloadData()
             }
-           
+            
         }
     }
-
     
-   
-
+    
+    
+    
 }
 
 extension MainViewController: UITableViewDataSource {
@@ -53,10 +55,10 @@ extension MainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as! MovieTableViewCell
         cell.configure(with: movies[indexPath.row])
         
-        if (indexPath.row == movies.count-1){
+        if (indexPath.row == movies.count-1 && 500 > indexPath.row){
             movieManager.getMovies(page: page ) { movies in
                 self.movies.append(contentsOf:movies.results ?? [])
-              // print(movies)
+                // print(movies)
                 
                 DispatchQueue.main.async {
                     self.movieTableView.reloadData()
@@ -68,3 +70,18 @@ extension MainViewController: UITableViewDataSource {
     }
 }
 
+extension MainViewController: UITableViewDelegate{
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cellIndexPathRow = indexPath.row
+        performSegue(withIdentifier: "MovieFullScreenViewController", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewControler =   segue.destination as? MovieFullScreenViewController
+        viewControler?.movie = movies[cellIndexPathRow]
+        print("taskkkkkkkk \(cellIndexPathRow)")
+    }
+    
+}
