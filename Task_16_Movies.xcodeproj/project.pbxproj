@@ -13,6 +13,7 @@
 		3B0553E52721D307002215FC /* MovieFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0553E42721D307002215FC /* MovieFullScreenViewController.swift */; };
 		3B0553E82721D322002215FC /* MovieFullScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0553E72721D322002215FC /* MovieFullScreenViewController.storyboard */; };
 		3B0553EA2721E6E9002215FC /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0553E92721E6E9002215FC /* ViewExtensions.swift */; };
+		3B238285275009E1005F1BE9 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 3B238284275009E1005F1BE9 /* SkeletonView */; };
 		3BB765122721601200CDEA93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB765112721601200CDEA93 /* AppDelegate.swift */; };
 		3BB765142721601200CDEA93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB765132721601200CDEA93 /* SceneDelegate.swift */; };
 		3BB765162721601200CDEA93 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB765152721601200CDEA93 /* MainViewController.swift */; };
@@ -77,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B238285275009E1005F1BE9 /* SkeletonView in Frameworks */,
 				3B0553E12721C764002215FC /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +291,7 @@
 			name = Task_16_Movies;
 			packageProductDependencies = (
 				3B0553E02721C764002215FC /* Kingfisher */,
+				3B238284275009E1005F1BE9 /* SkeletonView */,
 			);
 			productName = Task_16_Movies;
 			productReference = 3BB7650E2721601200CDEA93 /* Task_16_Movies.app */;
@@ -364,6 +367,7 @@
 			mainGroup = 3BB765052721601200CDEA93;
 			packageReferences = (
 				3B0553DF2721C764002215FC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				3B238283275009E1005F1BE9 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 3BB7650F2721601200CDEA93 /* Products */;
 			projectDirPath = "";
@@ -788,6 +792,14 @@
 				version = 7.1.1;
 			};
 		};
+		3B238283275009E1005F1BE9 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -795,6 +807,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3B0553DF2721C764002215FC /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		3B238284275009E1005F1BE9 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B238283275009E1005F1BE9 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

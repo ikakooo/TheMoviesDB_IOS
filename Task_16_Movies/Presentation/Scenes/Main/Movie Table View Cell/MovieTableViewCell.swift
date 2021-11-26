@@ -13,6 +13,8 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var movieName: UILabel!
     @IBOutlet weak var movieIMG: UIImageView!
     
+    static let identifier = "MovieTableViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -53,6 +55,8 @@ class MovieTableViewCell: UITableViewCell {
             result in
             switch result {
             case .success(let value):
+                self.stopSkeletonAnimation()
+                self.hideSkeleton()
                 print("Task done for: \(value.source.url?.absoluteString ?? "")")
             case .failure(let error):
                 print("Job failed: \(error.localizedDescription)")

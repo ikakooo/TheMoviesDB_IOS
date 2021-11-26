@@ -57,6 +57,7 @@
                             <constraint firstItem="9W6-hI-nbD" firstAttribute="top" secondItem="tau-rF-vOW" secondAttribute="bottom" constant="5" id="tXp-88-ulf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xiD-YW-AUo"/>
                     <connections>
                         <outlet property="filmName" destination="9W6-hI-nbD" id="nLg-LJ-aZZ"/>
                         <outlet property="filmdescription" destination="mOE-NX-LLQ" id="psf-rJ-lSH"/>
